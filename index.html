@@ -1,59 +1,162 @@
-!DOCTYPE html>
-<html lang="en">
+/anime-site
+  ├── index.html
+  ├── styles.css
+  └── images
+       └── anime1.jpg
+       └── anime2.jpg
+       └── anime3.jpg
+
+       <!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sobre mim</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
-    <nav>
-        <ul>
-            <li>
-               <a href="index.html">Sobre Mim</a>
-            </li>
-            <li>
-               <a href="project.html">Projetos</a>
-            </li>
-            <li>
-               <a href="contact.html">Contato</a>
-            </li>
-        </ul>
-    </nav>
     <header>
-        <div class="center">
-        </div>
-        <h1> alexsander </h1>
-        <h2>Estudante</h2>
-        <img src=""></img>
+        <h1>Anime World</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Animes</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h3>Sobre Mim</h3>
-            <p>
-               alexsander é um estudante do ensino medio com 17 anos que gosta de jogar e de assistir filmes e ler mangas
-            </p>
+        <section class="anime-list">
+            <h2>Animes Populares</h2>
+
+            <div class="anime-item">
+                <img src="images/anime1.jpg" alt="Anime 1">
+                <div class="anime-info">
+                    <h3>Attack on Titan</h3>
+                    <p>Género: Ação, Drama, Fantasia</p>
+                    <p>Sinopse: Um mundo onde os humanos vivem cercados por muralhas, tentando sobreviver contra os Titãs, criaturas gigantes que devoram seres humanos.</p>
+                </div>
+            </div>
+
+            <div class="anime-item">
+                <img src="images/anime2.jpg" alt="Anime 2">
+                <div class="anime-info">
+                    <h3>My Hero Academia</h3>
+                    <p>Género: Ação, Superpoderes, Shounen</p>
+                    <p>Sinopse: Em um mundo onde quase toda a população tem superpoderes, um jovem sem poderes sonha em se tornar o maior herói de todos.</p>
+                </div>
+            </div>
+
+            <div class="anime-item">
+                <img src="images/anime3.jpg" alt="Anime 3">
+                <div class="anime-info">
+                    <h3>One Piece</h3>
+                    <p>Género: Aventura, Ação, Comédia</p>
+                    <p>Sinopse: Acompanhe a jornada de Monkey D. Luffy, um jovem que busca o tesouro lendário conhecido como "One Piece" para se tornar o Rei dos Piratas.</p>
+                </div>
+            </div>
         </section>
-        <h3>Formaçao </h3>
-        <p>
-            Elvis é um entusiasta da programação que se destacou no mundo da tecnologia. Desde cedo, demonstrou uma curiosidade insaciável por como as coisas funcionam. Seu interesse pela programação começou com pequenos projetos, onde explorou linguagens como Python e JavaScript. Através de tutoriais e desafios online, Elvis desenvolveu suas habilidades e encontrou prazer em resolver problemas complexos.
-
-            Com um olhar atento para detalhes e uma abordagem criativa, ele não se contenta apenas em escrever códigos; Elvis busca sempre maneiras inovadoras de melhorar seus projetos. Seu portfólio é repleto de aplicativos e sites que refletem sua personalidade única e sua paixão por design.
-        </p>
-    </section>
-    <h3>Cursos</h3>
-    <p>
-        Elvis é um entusiasta da programação que se destacou no mundo da tecnologia. Desde cedo, demonstrou uma curiosidade insaciável por como as coisas funcionam. Seu interesse pela programação começou com pequenos projetos, onde explorou linguagens como Python e JavaScript. Através de tutoriais e desafios online, Elvis desenvolveu suas habilidades e encontrou prazer em resolver problemas complexos.
-
-        Com um olhar atento para detalhes e uma abordagem criativa, ele não se contenta apenas em escrever códigos; Elvis busca sempre maneiras inovadoras de melhorar seus projetos. Seu portfólio é repleto de aplicativos e sites que refletem sua personalidade única e sua paixão por design.
-    </p>
-</section>
-        <footer>
-            <a>
-               <img src=""></img>
-               <p>Github</p>
-            </a>
-        </footer>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Anime World. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+/* Reset de estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.anime-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+.anime-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.anime-item img {
+    width: 100%;
+    height: auto;
+}
+
+.anime-info {
+    padding: 1rem;
+}
+
+.anime-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.anime-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
